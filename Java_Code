@@ -1,0 +1,158 @@
+import java.util.Scanner;
+
+public class MyFinalCode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		
+		int count = 0;
+		
+		while (count == 0){ //player is in A
+			System.out.println("Player is in A");
+			System.out.println("Item found, pick up? 1. Yes : 2. No");
+			int input = in.nextInt();
+			if(input == 1){ //player chose yes
+				System.out.println("Player picked up ray gun. H and F are locked continue to B");
+				count = 1; //player moves to B
+			}
+			else if (input == 2){ //player chooses no
+				System.out.println("Ray gun ignored. H and F are locked continue to B");
+				count = 1; //player moves to B
+			}
+			
+			while (count == 1){
+				System.out.println("Player is in B. Oh no enemy!!! Do you have the ray gun? 1. Yes : 2. No");
+				int input2 = in.nextInt();
+				if(input2 == 1){
+					System.out.println("Enemy dead continue to C");
+					count = 2;
+				}
+				else if (input2 == 2){
+					System.out.println("He gave you the sweet chin music, game over");
+					count = 0;
+					System.out.println();
+				}
+				
+				while (count == 2){
+					System.out.println("Nothing here continue to D");
+					count = 3;
+					while (count == 3){
+						System.out.println("There are two enemies!!! 1. Fight : 2. Run");
+						int input3 = in.nextInt();
+						if(input3 == 1){
+							System.out.println("Took care of business, continue to E");
+							count = 4;
+						}
+						else if (input3 == 2){
+							System.out.println("Could not escape, game over");
+							count = 0;
+							System.out.println();
+						}
+						while (count == 4){
+							System.out.println("Item found, 1. to pick up : 2. ignore");
+							int input4 = in.nextInt();
+							if(input4 == 1){
+								System.out.println("Found body armor, Continue to A");
+								count = 0;
+								while (count == 0){
+									System.out.println("F has been unlocked but not H, continue to F");
+									count = 5;
+								}
+							}
+							else if (input4 == 2){
+								System.out.println("Continue to A");
+								count = 0;
+								while (count == 0){
+									System.out.println("F has been unlocked but not H, continue to F");
+									count = 5;
+								}
+							}
+							while (count == 5){
+								System.out.println("You're in F, 3 enemies!!! 1. Fight : 2. Run");
+								int input5 = in.nextInt();
+								if(input5 == 1){
+									System.out.println("Triple kill, item found! 1. Pick : 2. Ignore");
+									System.out.println("Found quantum battery for teleprotation but there's no teleporter?");
+									System.out.println("Continue to G");
+									count = 6;
+								}
+								else if (input5 == 2){
+									System.out.println("They devoured you");
+									System.out.println();
+									count = 0;
+								}
+								while (count == 6){
+									System.out.println("You're in G, the door behind you locked");
+									System.out.println("Hey there's a teleporter but it's not on, do you have the quantum battery? 1. Yes : 2. No");
+									int input6 = in.nextInt();
+									if (input6 == 1){
+										System.out.println("You are teleported to H");
+										count = 7;
+									}
+									else if (input6 == 2){
+										System.out.println("You will die here, game over");
+										System.out.println();
+										count = 0;
+									}
+									while (count == 7){
+										System.out.println("You are in H, item found! 1. Pickup : 2. Ignore");
+										int input7 = in.nextInt();
+										if (input7 == 1){
+											System.out.println("You have a jetpack! Continue to I");
+											count = 8;
+										}
+										else if (input7 == 2){
+											System.out.println("Continue to I");
+											count = 8;
+										}
+										while (count == 8){
+											System.out.println("An enemy with a sniper rifle and the door to J are 100 ft. up but the ladder is destoryed");
+											System.out.println("Do you have the jetpack? 1. Yes : 2. No");
+											int input8 = in.nextInt();
+											if (input8 == 1){
+												System.out.println("The jetpack, body armor, and ray gun saved your life!");
+												System.out.println("Item found! 1. Pickup : 2. Ignore");
+												int input9 = in.nextInt();
+												if (input9 == 1){
+													System.out.println("You've just acquired 30 seconds of invincibility, NOICE!");
+													System.out.println("Continue to J");
+												}
+												else if (input9 == 2){
+													System.out.println("Continue to J");
+												}
+												count = 9;
+											}
+											else if (input8 == 2){
+												System.out.println("Sniper killed you, game over");
+												System.out.println();
+												count = 0;
+											}
+											while (count == 9){
+												System.out.println("You're in the boss's lair");
+												System.out.println("Oh no!!! it Bowser and Koopa Kid");
+												System.out.println("The only way to defeat both is with invincibility, do you have it? 1. yes : 2. no");
+												int input10 = in.nextInt();
+												if (input10 == 1){
+													System.out.println("You have beaten the level, go to Level 2");
+													count = 11;
+												}
+												else if (input10 == 2){
+													System.out.println("You got murked, game over");
+													System.out.println();
+													count = 0;
+												}
+											}
+										}
+									}
+								}
+							}
+						}	
+				
+					}	
+			
+				}
+			}	
+		}
+	}
+}
